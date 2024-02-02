@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+:root {
+    --clr-main-bg: hsl(0, 0%, 95%);
+    --clr-bg-1: hsl(31, 77%, 52%);
+    --clr-bg-2: hsl(184, 100%, 22%);
+    --clr-bg-3: hsl(179, 100%, 13%);
+    --clr-text: hsla(0, 0%, 100%, 0.75);
+
+    --fs: 15px;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr-main-bg);
+    font-size: var(--fs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-inline: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.stage {
+    padding: 50px;
+}
+.stage h1 {
+    color: var(--clr-main-bg);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: var(--fw-700);
+    font-size: 40px;
+}
+.stage p {
+    color: var(--clr-text);
+    line-height: 27px;
+    margin-bottom: 90px;
+}
+.stage button {
+    background-color: var(--clr-main-bg);
+    padding: 15px 30px;
+    border-radius: 100vw;
+    font-family: 'Lexend Deca', sans-serif;
+    border: 2px solid var(--clr-main-bg);
+}
+.one {
+    background-color: var(--clr-bg-1);
+}
+.one button {
+    color: var(--clr-bg-1);
+}
+.one button:active {
+    background-color: var(--clr-bg-1);
+    color: var(--clr-main-bg);
+}
+.two {
+    background-color: var(--clr-bg-2);
+}
+.two button {
+    color: var(--clr-bg-2);
+}
+.two button:active {
+    background-color: var(--clr-bg-2);
+    color: var(--clr-main-bg);
+}
+.three {
+    background-color: var(--clr-bg-3);
+}
+.three button {
+    color: var(--clr-bg-3);
+}
+.three button:active {
+    background-color: var(--clr-bg-3);
+    color: var(--clr-main-bg);
+}
+@media only screen and (max-width: 376px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-inline: 20px;
+    }
+    .stage p {
+        margin-bottom: 20px;
+    }
+}
